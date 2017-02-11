@@ -1,5 +1,5 @@
 //
-//  DemosViewController.m
+//  LoadMoreViewController.m
 //  zues
 //
 //  Created by mac on 2017/2/11.
@@ -17,21 +17,23 @@
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import "DemosViewController.h"
-#import <IGListKit.h>
-#import "DemoSectionController.h"
 #import "LoadMoreViewController.h"
+#import <IGListKit.h>
+#import "LabelSectionController.h"
+#import "SpinnerCell.h"
 
-@interface DemosViewController ()<IGListAdapterDataSource>
+@interface LoadMoreViewController ()<IGListAdapterDataSource,UIScrollViewDelegate>
 //IGListAdapter来控制collectionView的数据显示
 @property (nonatomic,strong) IGListAdapter *adapter;
 //IGListCollectionView继承自UICollectionView,用来代替UITableView
 @property (nonatomic,strong) IGListCollectionView *collectionView;
 //数据源数组
-@property (nonatomic,strong) NSMutableArray *demos;
+@property (nonatomic,strong) NSMutableArray *items;
+@property (nonatomic,assign) BOOL loading;
+@property (nonatomic,strong) NSString *spinToken;
 @end
 
-@implementation DemosViewController
+@implementation LoadMoreViewController
 
 - (IGListAdapter *)adapter {
     if (!_adapter) {
@@ -40,7 +42,7 @@
          参数1：IGListAdapterUpdater，是一个遵循了IGListUpdatingDelegate的对象，它处理每行更新。
          参数2：viewController，是包含IGListAdapter的UIViewController。 可以用来push到其他控制器
          参数3：workingRangeSize是工作范围的大小，它可以让你为刚好在可见范围之外的视图做一些准备工作，暂时没用到给0。
-        */
+         */
         _adapter = [[IGListAdapter alloc] initWithUpdater:[[IGListAdapterUpdater alloc] init] viewController:self workingRangeSize:0];
     }
     return _adapter;
@@ -53,24 +55,19 @@
     return _collectionView;
 }
 
-- (NSMutableArray *)demos {
-    if (!_demos) {
-        /**
-         数据源数组，数组里的model要实现IGListDiffable
-         */
-        _demos = [NSMutableArray arrayWithObjects:
-                  [[DemoItem alloc] init:@"上拉加载" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil],
-                  [[DemoItem alloc] init:@"上拉加载" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil],
-                  [[DemoItem alloc] init:@"上拉加载" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil],
-                  [[DemoItem alloc] init:@"上拉加载" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil],
-                  [[DemoItem alloc] init:@"上拉加载" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil], nil];
+- (NSMutableArray *)items {
+    if (!_items) {
+        _items=[NSMutableArray array];
+        for (int i=0; i<20; i++) {
+            [_items addObject:[NSString stringWithFormat:@"%zi",i]];
+        }
     }
-    return _demos;
+    return _items;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Demos";
+    _spinToken=@"spinner";
     [self.view addSubview:self.collectionView];
     //给adapter赋值collectionView
     self.adapter.collectionView=self.collectionView;
@@ -86,17 +83,50 @@
 // MARK: IGListAdapterDataSource
 -(NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter{
     //给出数据源
-    return self.demos;
+    if (_loading) {
+        [self.items addObject:_spinToken];
+    }
+    return self.items;
 }
 
 -(IGListSectionController<IGListSectionType> *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object{
     //返回一个IGListSectionController实例，在自定义IGListSectionController中将实现cell的创建，赋值。相当于UITableView一个indexPath.setion,根据你数组中object的类型判断返回对应的自定义IGListSectionController
-    return [[DemoSectionController alloc] init];
+    if ([object isEqualToString:_spinToken]) {
+        return [[IGListSingleSectionController alloc] initWithCellClass:[SpinnerCell class] configureBlock:^(id  _Nonnull item, __kindof SpinnerCell * _Nonnull cell) {
+            [cell.activityIndicator startAnimating];
+        } sizeBlock:^CGSize(id  _Nonnull item, id<IGListCollectionContext>  _Nullable collectionContext) {
+            return CGSizeMake([collectionContext containerSize].width, 100);
+        }];
+    }
+    return [[LabelSectionController alloc] init];
 }
 
 -(UIView *)emptyViewForListAdapter:(IGListAdapter *)listAdapter{
     //返回一个数据为空时的显示视图
     return nil;
+}
+
+// MARK: UIScrollViewDelegate
+-(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
+    
+    CGFloat distance = scrollView.contentSize.height - (targetContentOffset->y  + scrollView.bounds.size.height);
+    
+    if (!_loading && distance < 200) {
+        _loading = YES;
+        [self.adapter performUpdatesAnimated:YES completion:nil];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            sleep(2);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.loading = NO;
+                NSInteger itemCount = self.items.count;
+                for (int i=0; i<5; i++) {
+                    [_items addObject:[NSString stringWithFormat:@"%zi",i+itemCount]];
+                }
+                [self.adapter performUpdatesAnimated:YES completion:nil];
+            });
+        });
+    }
 }
 
 - (void)didReceiveMemoryWarning {

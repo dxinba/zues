@@ -10,6 +10,9 @@
 		042A11721E4EAA4B0017582A /* DemosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A11711E4EAA4B0017582A /* DemosViewController.m */; };
 		042A11761E4EAC3B0017582A /* DemoSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A11751E4EAC3B0017582A /* DemoSectionController.m */; };
 		042A117A1E4EB5080017582A /* LabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A11791E4EB5080017582A /* LabelCell.m */; };
+		042A117D1E4F01FF0017582A /* LoadMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A117C1E4F01FF0017582A /* LoadMoreViewController.m */; };
+		042A11801E4F06B50017582A /* SpinnerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A117F1E4F06B50017582A /* SpinnerCell.m */; };
+		042A11831E4F09890017582A /* LabelSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A11821E4F09890017582A /* LabelSectionController.m */; };
 		15135A7F1E4D6F620088B0D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15135A7E1E4D6F620088B0D0 /* main.m */; };
 		15135A821E4D6F620088B0D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15135A811E4D6F620088B0D0 /* AppDelegate.m */; };
 		15135A851E4D6F620088B0D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15135A841E4D6F620088B0D0 /* ViewController.m */; };
@@ -45,6 +48,12 @@
 		042A11751E4EAC3B0017582A /* DemoSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoSectionController.m; sourceTree = "<group>"; };
 		042A11781E4EB5080017582A /* LabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelCell.h; sourceTree = "<group>"; };
 		042A11791E4EB5080017582A /* LabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelCell.m; sourceTree = "<group>"; };
+		042A117B1E4F01FF0017582A /* LoadMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadMoreViewController.h; sourceTree = "<group>"; };
+		042A117C1E4F01FF0017582A /* LoadMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadMoreViewController.m; sourceTree = "<group>"; };
+		042A117E1E4F06B50017582A /* SpinnerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpinnerCell.h; sourceTree = "<group>"; };
+		042A117F1E4F06B50017582A /* SpinnerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpinnerCell.m; sourceTree = "<group>"; };
+		042A11811E4F09890017582A /* LabelSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelSectionController.h; sourceTree = "<group>"; };
+		042A11821E4F09890017582A /* LabelSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelSectionController.m; sourceTree = "<group>"; };
 		15135A7A1E4D6F620088B0D0 /* zues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zues.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15135A7E1E4D6F620088B0D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15135A801E4D6F620088B0D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +106,8 @@
 			children = (
 				042A11701E4EAA4B0017582A /* DemosViewController.h */,
 				042A11711E4EAA4B0017582A /* DemosViewController.m */,
+				042A117B1E4F01FF0017582A /* LoadMoreViewController.h */,
+				042A117C1E4F01FF0017582A /* LoadMoreViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -106,6 +117,8 @@
 			children = (
 				042A11741E4EAC3B0017582A /* DemoSectionController.h */,
 				042A11751E4EAC3B0017582A /* DemoSectionController.m */,
+				042A11811E4F09890017582A /* LabelSectionController.h */,
+				042A11821E4F09890017582A /* LabelSectionController.m */,
 			);
 			path = SectionControllers;
 			sourceTree = "<group>";
@@ -115,6 +128,8 @@
 			children = (
 				042A11781E4EB5080017582A /* LabelCell.h */,
 				042A11791E4EB5080017582A /* LabelCell.m */,
+				042A117E1E4F06B50017582A /* SpinnerCell.h */,
+				042A117F1E4F06B50017582A /* SpinnerCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -387,9 +402,12 @@
 				15135A851E4D6F620088B0D0 /* ViewController.m in Sources */,
 				042A11761E4EAC3B0017582A /* DemoSectionController.m in Sources */,
 				042A117A1E4EB5080017582A /* LabelCell.m in Sources */,
+				042A117D1E4F01FF0017582A /* LoadMoreViewController.m in Sources */,
+				042A11831E4F09890017582A /* LabelSectionController.m in Sources */,
 				15135A821E4D6F620088B0D0 /* AppDelegate.m in Sources */,
 				15135A7F1E4D6F620088B0D0 /* main.m in Sources */,
 				042A11721E4EAA4B0017582A /* DemosViewController.m in Sources */,
+				042A11801E4F06B50017582A /* SpinnerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
