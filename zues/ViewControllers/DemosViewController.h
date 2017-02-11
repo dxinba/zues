@@ -1,8 +1,8 @@
 //
-//  AppDelegate.h
+//  DemosViewController.h
 //  zues
 //
-//  Created by v on 17/2/10.
+//  Created by mac on 2017/2/11.
 //  Copyright © 2017年 v. All rights reserved.
 //
 /**
@@ -19,10 +19,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface DemosViewController : UIViewController
 
 @end
-

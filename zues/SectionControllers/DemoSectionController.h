@@ -1,8 +1,8 @@
 //
-//  AppDelegate.h
+//  DemoSectionController.h
 //  zues
 //
-//  Created by v on 17/2/10.
+//  Created by mac on 2017/2/11.
 //  Copyright © 2017年 v. All rights reserved.
 //
 /**
@@ -17,12 +17,16 @@
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import <UIKit/UIKit.h>
+#import <IGListKit/IGListKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface DemoItem : NSObject<IGListDiffable>
+@property (nonatomic,strong) NSString *name;
+@property (nonatomic,assign) Class controllerClass;
+@property (nonatomic,strong) NSString *controllerIdentifier;
 
-@property (strong, nonatomic) UIWindow *window;
-
-
+-(instancetype)init:(NSString *)name controllerClass:(Class)controllerClass controllerIdentifier:(NSString *)controllerIdentifier;
 @end
 
+@interface DemoSectionController : IGListSectionController<IGListSectionType>
+@property (nonatomic,strong) DemoItem *object;
+@end
