@@ -73,6 +73,7 @@
     self.adapter.collectionView=self.collectionView;
     //给adapter赋值dataSource
     self.adapter.dataSource=self;
+    self.adapter.scrollViewDelegate=self;
 }
 
 -(void)viewDidLayoutSubviews{
@@ -83,15 +84,15 @@
 // MARK: IGListAdapterDataSource
 -(NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter{
     //给出数据源
-    if (_loading) {
-        [self.items addObject:_spinToken];
+    if (_loading) {//判断是否正在加载
+        [self.items addObject:_spinToken];//添加字符串spinner
     }
     return self.items;
 }
 
 -(IGListSectionController<IGListSectionType> *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object{
     //返回一个IGListSectionController实例，在自定义IGListSectionController中将实现cell的创建，赋值。相当于UITableView一个indexPath.setion,根据你数组中object的类型判断返回对应的自定义IGListSectionController
-    if ([object isEqualToString:_spinToken]) {
+    if ([object isEqualToString:_spinToken]) {//是spinner，则显示加载cell
         return [[IGListSingleSectionController alloc] initWithCellClass:[SpinnerCell class] configureBlock:^(id  _Nonnull item, __kindof SpinnerCell * _Nonnull cell) {
             [cell.activityIndicator startAnimating];
         } sizeBlock:^CGSize(id  _Nonnull item, id<IGListCollectionContext>  _Nullable collectionContext) {
@@ -108,21 +109,28 @@
 
 // MARK: UIScrollViewDelegate
 -(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
-    
     CGFloat distance = scrollView.contentSize.height - (targetContentOffset->y  + scrollView.bounds.size.height);
     
     if (!_loading && distance < 200) {
+        //开始加载
         _loading = YES;
+        //更新列表
         [self.adapter performUpdatesAnimated:YES completion:nil];
+        
+        //模拟网络加载
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             sleep(2);
             
+            //加载完成，添加数据
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.loading = NO;
+                _loading = NO;
                 NSInteger itemCount = self.items.count;
+                //删除spinner
+                [_items removeLastObject];
                 for (int i=0; i<5; i++) {
                     [_items addObject:[NSString stringWithFormat:@"%zi",i+itemCount]];
                 }
+                //更新列表
                 [self.adapter performUpdatesAnimated:YES completion:nil];
             });
         });
