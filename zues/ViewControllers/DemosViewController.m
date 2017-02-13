@@ -84,16 +84,44 @@
 }
 
 // MARK: IGListAdapterDataSource
+/**
+ 请求数据源的对象在列表中显示。
+
+ @param listAdapter请求此信息的列表适配器。
+
+ @return 列表的对象数组。
+*/
 -(NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter{
     //给出数据源
     return self.demos;
 }
 
+/**
+ 向数据源请求列表中指定对象的段控制器。
+
+ @param listAdapter请求此信息的列表适配器。
+ @param object列表中的一个对象。
+
+ @return 可以在列表中显示的新节控制器实例。
+
+ @note当被请求时，应在这里为对象初始化新的段控制器。 您可以传送任何其他资料至此时段控制器。
+
+ 每当创建，更新或重新加载`IGListAdapter`时，将为所有对象初始化控制器。当对象被移动或更新时，段控制器被重用。 维护` - [IGListDiffable diffIdentifier]`保证这一点。
+*/
 -(IGListSectionController<IGListSectionType> *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object{
     //返回一个IGListSectionController实例，在自定义IGListSectionController中将实现cell的创建，赋值。相当于UITableView一个indexPath.setion,根据你数组中object的类型判断返回对应的自定义IGListSectionController
     return [[DemoSectionController alloc] init];
 }
 
+/**
+ 当列表为空时，要求视图的数据源用作集合视图背景。
+
+ @param listAdapter请求此信息的列表适配器。
+
+ @return一个视图用作集合视图背景，如果你不想要一个背景视图返回'nil'。
+
+ @note 每次更新列表适配器时调用此方法。 您可以随时返回新的意见，但出于性能原因，您可能希望保留视图并在此返回。 以下只负责添加背景视图并保持其可见性。
+*/
 -(UIView *)emptyViewForListAdapter:(IGListAdapter *)listAdapter{
     //返回一个数据为空时的显示视图
     return nil;
