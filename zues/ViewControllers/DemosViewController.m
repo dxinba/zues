@@ -63,7 +63,7 @@
                   [[DemoItem alloc] init:@"上拉加载" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"上拉加载" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"混合数据" controllerClass:[MixedDataViewController class] controllerIdentifier:nil],
-                  [[DemoItem alloc] init:@"上拉加载" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil],
+                  [[DemoItem alloc] init:@"阿斯顿发的说法的" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"上拉加载" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil], nil];
     }
     return _demos;
