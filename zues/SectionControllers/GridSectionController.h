@@ -1,11 +1,13 @@
 //
-//  LabelCell.h
+//  GridSectionController.h
 //  zues
 //
-//  Created by mac on 2017/2/11.
+//  Created by mac on 2017/2/15.
 //  Copyright © 2017年 v. All rights reserved.
 //
 /**
+ Copyright (c) 2016-present, Facebook, Inc. All rights reserved.
+ 
  The examples provided by Facebook are for non-commercial testing and evaluation
  purposes only. Facebook reserves all rights not expressly granted.
  
@@ -17,12 +19,15 @@
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import <UIKit/UIKit.h>
+#import <IGListKit/IGListKit.h>
 
-@interface LabelCell : UICollectionViewCell
-@property (nonatomic,strong) UILabel *label;
+@interface GridItem : NSObject<IGListDiffable>
+@property (nonatomic,strong) UIColor *color;
+@property (nonatomic,assign) NSInteger itemCount;
 
-+(CGFloat)textHeight:(NSString *)text width:(CGFloat)width;
+-(instancetype)init:(UIColor *)color itemCount:(NSInteger)itemCount;
+@end
 
-+(CGFloat)singleLineHeight;
+@interface GridSectionController : IGListSectionController<IGListSectionType>
+@property (nonatomic,strong) GridItem *object;
 @end

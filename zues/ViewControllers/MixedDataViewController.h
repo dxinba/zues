@@ -1,8 +1,8 @@
 //
-//  LabelCell.h
+//  MixedDataViewController.h
 //  zues
 //
-//  Created by mac on 2017/2/11.
+//  Created by mac on 2017/2/15.
 //  Copyright © 2017年 v. All rights reserved.
 //
 /**
@@ -19,10 +19,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LabelCell : UICollectionViewCell
-@property (nonatomic,strong) UILabel *label;
+@interface MixedDataViewController : UIViewController
 
-+(CGFloat)textHeight:(NSString *)text width:(CGFloat)width;
-
-+(CGFloat)singleLineHeight;
 @end

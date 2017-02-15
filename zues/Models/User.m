@@ -11,7 +11,7 @@
 @implementation User
 
 - (instancetype)initWithPk:(NSNumber *)pk name:(NSString *)name handle:(NSString *)handle {
-    if (self) {
+    if (self=[super init]) {
         self.pk = pk;
         self.name = name;
         self.handle = handle;
@@ -23,9 +23,11 @@
     return _pk;
 }
 
-- (BOOL)isEqualToDiffableObject:(id<IGListDiffable>)object {
-//    User *right = object;
-    return NO;
+- (BOOL)isEqualToDiffableObject:(User *)object {
+    if (self==object) {//指针地址比较
+        return YES;
+    }
+    return [_name isEqualToString:object.name] && [_handle isEqualToString:object.handle];
 }
 
 @end

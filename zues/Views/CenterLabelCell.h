@@ -1,11 +1,13 @@
 //
-//  LabelCell.h
+//  CenterLabelCell.h
 //  zues
 //
-//  Created by mac on 2017/2/11.
+//  Created by mac on 2017/2/15.
 //  Copyright © 2017年 v. All rights reserved.
 //
 /**
+ Copyright (c) 2016-present, Facebook, Inc. All rights reserved.
+ 
  The examples provided by Facebook are for non-commercial testing and evaluation
  purposes only. Facebook reserves all rights not expressly granted.
  
@@ -19,10 +21,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LabelCell : UICollectionViewCell
+@interface CenterLabelCell : UICollectionViewCell
 @property (nonatomic,strong) UILabel *label;
-
-+(CGFloat)textHeight:(NSString *)text width:(CGFloat)width;
-
-+(CGFloat)singleLineHeight;
 @end

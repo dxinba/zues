@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042392771E541D0B00EF0366 /* GridSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042392761E541D0B00EF0366 /* GridSectionController.m */; };
+		0423927A1E541D1400EF0366 /* MixedDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042392791E541D1400EF0366 /* MixedDataViewController.m */; };
+		0423927D1E541D2100EF0366 /* CenterLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0423927C1E541D2100EF0366 /* CenterLabelCell.m */; };
+		042392801E54276F00EF0366 /* ExpandableSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0423927F1E54276F00EF0366 /* ExpandableSectionController.m */; };
+		042392831E54307700EF0366 /* UserSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042392821E54307700EF0366 /* UserSectionController.m */; };
+		042392861E54310C00EF0366 /* DetailLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042392851E54310C00EF0366 /* DetailLabelCell.m */; };
 		042A11721E4EAA4B0017582A /* DemosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A11711E4EAA4B0017582A /* DemosViewController.m */; };
 		042A11761E4EAC3B0017582A /* DemoSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A11751E4EAC3B0017582A /* DemoSectionController.m */; };
 		042A117A1E4EB5080017582A /* LabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A11791E4EB5080017582A /* LabelCell.m */; };
@@ -47,6 +53,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042392751E541D0B00EF0366 /* GridSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridSectionController.h; sourceTree = "<group>"; };
+		042392761E541D0B00EF0366 /* GridSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridSectionController.m; sourceTree = "<group>"; };
+		042392781E541D1400EF0366 /* MixedDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixedDataViewController.h; sourceTree = "<group>"; };
+		042392791E541D1400EF0366 /* MixedDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixedDataViewController.m; sourceTree = "<group>"; };
+		0423927B1E541D2100EF0366 /* CenterLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterLabelCell.h; sourceTree = "<group>"; };
+		0423927C1E541D2100EF0366 /* CenterLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterLabelCell.m; sourceTree = "<group>"; };
+		0423927E1E54276F00EF0366 /* ExpandableSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandableSectionController.h; sourceTree = "<group>"; };
+		0423927F1E54276F00EF0366 /* ExpandableSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandableSectionController.m; sourceTree = "<group>"; };
+		042392811E54307700EF0366 /* UserSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSectionController.h; sourceTree = "<group>"; };
+		042392821E54307700EF0366 /* UserSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSectionController.m; sourceTree = "<group>"; };
+		042392841E54310C00EF0366 /* DetailLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailLabelCell.h; sourceTree = "<group>"; };
+		042392851E54310C00EF0366 /* DetailLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailLabelCell.m; sourceTree = "<group>"; };
 		042A11701E4EAA4B0017582A /* DemosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemosViewController.h; sourceTree = "<group>"; };
 		042A11711E4EAA4B0017582A /* DemosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemosViewController.m; sourceTree = "<group>"; };
 		042A11741E4EAC3B0017582A /* DemoSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoSectionController.h; sourceTree = "<group>"; };
@@ -125,6 +143,8 @@
 				042A117C1E4F01FF0017582A /* LoadMoreViewController.m */,
 				1545452D1E52F90C00DC64A0 /* SearchViewController.h */,
 				1545452E1E52F90C00DC64A0 /* SearchViewController.m */,
+				042392781E541D1400EF0366 /* MixedDataViewController.h */,
+				042392791E541D1400EF0366 /* MixedDataViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -138,6 +158,12 @@
 				042A11821E4F09890017582A /* LabelSectionController.m */,
 				154545331E52FFC400DC64A0 /* SearchSectionController.h */,
 				154545341E52FFC400DC64A0 /* SearchSectionController.m */,
+				042392751E541D0B00EF0366 /* GridSectionController.h */,
+				042392761E541D0B00EF0366 /* GridSectionController.m */,
+				0423927E1E54276F00EF0366 /* ExpandableSectionController.h */,
+				0423927F1E54276F00EF0366 /* ExpandableSectionController.m */,
+				042392811E54307700EF0366 /* UserSectionController.h */,
+				042392821E54307700EF0366 /* UserSectionController.m */,
 			);
 			path = SectionControllers;
 			sourceTree = "<group>";
@@ -151,6 +177,10 @@
 				042A117F1E4F06B50017582A /* SpinnerCell.m */,
 				154545361E53008800DC64A0 /* SearchCell.h */,
 				154545371E53008800DC64A0 /* SearchCell.m */,
+				0423927B1E541D2100EF0366 /* CenterLabelCell.h */,
+				0423927C1E541D2100EF0366 /* CenterLabelCell.m */,
+				042392841E54310C00EF0366 /* DetailLabelCell.h */,
+				042392851E54310C00EF0366 /* DetailLabelCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,7 +350,6 @@
 				TargetAttributes = {
 					15135A791E4D6F620088B0D0 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 7JAE999JTU;
 					};
 					15135A921E4D6F620088B0D0 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -434,17 +463,23 @@
 			files = (
 				15135A851E4D6F620088B0D0 /* ViewController.m in Sources */,
 				154545351E52FFC400DC64A0 /* SearchSectionController.m in Sources */,
+				042392831E54307700EF0366 /* UserSectionController.m in Sources */,
 				1545452F1E52F90C00DC64A0 /* SearchViewController.m in Sources */,
 				042A11761E4EAC3B0017582A /* DemoSectionController.m in Sources */,
+				042392801E54276F00EF0366 /* ExpandableSectionController.m in Sources */,
 				042A117A1E4EB5080017582A /* LabelCell.m in Sources */,
 				042A117D1E4F01FF0017582A /* LoadMoreViewController.m in Sources */,
+				042392861E54310C00EF0366 /* DetailLabelCell.m in Sources */,
 				042A11831E4F09890017582A /* LabelSectionController.m in Sources */,
 				15135A821E4D6F620088B0D0 /* AppDelegate.m in Sources */,
 				15135A7F1E4D6F620088B0D0 /* main.m in Sources */,
 				1545452C1E52B92900DC64A0 /* User.m in Sources */,
 				154545381E53008800DC64A0 /* SearchCell.m in Sources */,
+				042392771E541D0B00EF0366 /* GridSectionController.m in Sources */,
 				042A11721E4EAA4B0017582A /* DemosViewController.m in Sources */,
+				0423927D1E541D2100EF0366 /* CenterLabelCell.m in Sources */,
 				042A11801E4F06B50017582A /* SpinnerCell.m in Sources */,
+				0423927A1E541D1400EF0366 /* MixedDataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,7 +621,7 @@
 			baseConfigurationReference = 2A7B10505E24732A3D5A9312 /* Pods-zues.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7JAE999JTU;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = zues/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.v.zues;
@@ -599,7 +634,7 @@
 			baseConfigurationReference = AE7692877801A35772A2D441 /* Pods-zues.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7JAE999JTU;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = zues/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.v.zues;

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <IGListKit.h>
+
 @interface User : NSObject<IGListDiffable>
 
 @property (strong, nonatomic) NSNumber *pk;
@@ -15,5 +16,7 @@
 @property (strong, nonatomic) NSString *name;
 
 @property (strong, nonatomic) NSString *handle;
+
+- (instancetype)initWithPk:(NSNumber *)pk name:(NSString *)name handle:(NSString *)handle;
 
 @end

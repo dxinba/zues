@@ -1,11 +1,13 @@
 //
-//  LabelCell.h
+//  CenterLabelCell.m
 //  zues
 //
-//  Created by mac on 2017/2/11.
+//  Created by mac on 2017/2/15.
 //  Copyright © 2017年 v. All rights reserved.
 //
 /**
+ Copyright (c) 2016-present, Facebook, Inc. All rights reserved.
+ 
  The examples provided by Facebook are for non-commercial testing and evaluation
  purposes only. Facebook reserves all rights not expressly granted.
  
@@ -17,12 +19,22 @@
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import <UIKit/UIKit.h>
+#import "CenterLabelCell.h"
 
-@interface LabelCell : UICollectionViewCell
-@property (nonatomic,strong) UILabel *label;
+@implementation CenterLabelCell
+- (UILabel *)label {
+    if (!_label) {
+        _label = [[UILabel alloc] init];
+        _label.textAlignment=NSTextAlignmentCenter;
+        _label.textColor=[UIColor whiteColor];
+        _label.font=[UIFont boldSystemFontOfSize:18.0];
+        [self.contentView addSubview:_label];
+    }
+    return _label;
+}
 
-+(CGFloat)textHeight:(NSString *)text width:(CGFloat)width;
-
-+(CGFloat)singleLineHeight;
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    _label.frame=self.contentView.bounds;
+}
 @end
