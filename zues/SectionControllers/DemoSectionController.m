@@ -21,7 +21,16 @@
 #import "LabelCell.h"
 
 @implementation DemoItem
-
+// MARK: INIT
+/**
+ controllerClass:类名
+ 
+ @return 可用于唯一标识对象的键。
+ 
+ @note
+ 
+ @warning
+ */
 - (instancetype)init:(NSString *)name controllerClass:(Class)controllerClass controllerIdentifier:(NSString *)controllerIdentifier
 {
     self = [super init];
@@ -58,6 +67,10 @@
     if (self==object) {
         return YES;
     }
+//    DemoItem *item = object;
+//    if ([item isEqual:object]) {
+//        return NO;
+//    }
     // TODO: guard let object = object as? DemoItem else { return false }
     return _controllerClass == [(DemoItem *)object controllerClass] && _controllerIdentifier == [(DemoItem *)object controllerIdentifier];
 }
