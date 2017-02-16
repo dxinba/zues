@@ -57,10 +57,25 @@
 }
 
 // MARK: IGListSupplementaryViewSource
+/**
+ 向SupplementaryViewSource请求支持的元素类型的数组。
+
+ @return 补充源处理的元素类型字符串数组。
+*/
 -(NSArray<NSString *> *)supportedElementKinds{
     return @[UICollectionElementKindSectionHeader];
 }
 
+/**
+向SupplementaryViewSource请求指定类型和索引的已配置补充视图。
+
+ @param elementKind请求的补充视图的类型
+ @param index正在请求的补充veiw的索引。
+
+ @note 这是您进行任何补充视图设置和配置的机会。
+
+ @warning 你不应该在这个方法中分配新的视图。 而是从“IGListCollectionContext”中取出视图。
+*/
 -(UICollectionReusableView *)viewForSupplementaryElementOfKind:(NSString *)elementKind atIndex:(NSInteger)index{
     UserHeaderView *view=[self.collectionContext dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader forSectionController:self nibName:@"UserHeaderView" bundle:nil atIndex:index];
     view.handleLabel.text = [NSString stringWithFormat:@"@%@",_feedItem.user.handle];
@@ -68,6 +83,14 @@
     return view;
 }
 
+/**
+ 向SupplementaryViewSource请求给定类型和索引路径的补充视图的大小。
+
+ @param elementKind补充视图的类型。
+ @param index所请求视图的索引。
+
+ @return 补充视图的大小。
+*/
 -(CGSize)sizeForSupplementaryViewOfKind:(NSString *)elementKind atIndex:(NSInteger)index{
     return CGSizeMake([self.collectionContext containerSize].width, 40);
 }

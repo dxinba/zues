@@ -6,7 +6,6 @@
 //  Copyright © 2017年 v. All rights reserved.
 //
 /**
- 
  The examples provided by Facebook are for non-commercial testing and evaluation
  purposes only. Facebook reserves all rights not expressly granted.
  

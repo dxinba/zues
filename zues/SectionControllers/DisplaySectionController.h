@@ -1,8 +1,8 @@
 //
-//  GridSectionController.h
+//  DisplaySectionController.h
 //  zues
 //
-//  Created by mac on 2017/2/15.
+//  Created by mac on 2017/2/16.
 //  Copyright © 2017年 v. All rights reserved.
 //
 /**
@@ -19,13 +19,6 @@
 
 #import <IGListKit/IGListKit.h>
 
-@interface GridItem : NSObject<IGListDiffable>
-@property (nonatomic,strong) UIColor *color;
-@property (nonatomic,assign) NSInteger itemCount;
+@interface DisplaySectionController : IGListSectionController<IGListSectionType,IGListDisplayDelegate>
 
--(instancetype)init:(UIColor *)color itemCount:(NSInteger)itemCount;
-@end
-
-@interface GridSectionController : IGListSectionController<IGListSectionType>
-@property (nonatomic,strong) GridItem *object;
 @end

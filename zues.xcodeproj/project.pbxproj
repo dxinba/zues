@@ -24,6 +24,8 @@
 		0428851E1E557CA000CC2B4B /* FeedItemSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0428851D1E557CA000CC2B4B /* FeedItemSectionController.m */; };
 		042885221E557E0C00CC2B4B /* UserHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042885201E557E0C00CC2B4B /* UserHeaderView.m */; };
 		042885251E55823C00CC2B4B /* UserHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042885241E55823C00CC2B4B /* UserHeaderView.xib */; };
+		042885281E55897B00CC2B4B /* DisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042885271E55897B00CC2B4B /* DisplayViewController.m */; };
+		0428852B1E558A7400CC2B4B /* DisplaySectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0428852A1E558A7400CC2B4B /* DisplaySectionController.m */; };
 		042A11721E4EAA4B0017582A /* DemosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A11711E4EAA4B0017582A /* DemosViewController.m */; };
 		042A11761E4EAC3B0017582A /* DemoSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A11751E4EAC3B0017582A /* DemoSectionController.m */; };
 		042A117A1E4EB5080017582A /* LabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A11791E4EB5080017582A /* LabelCell.m */; };
@@ -97,6 +99,10 @@
 		0428851F1E557E0C00CC2B4B /* UserHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserHeaderView.h; sourceTree = "<group>"; };
 		042885201E557E0C00CC2B4B /* UserHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserHeaderView.m; sourceTree = "<group>"; };
 		042885241E55823C00CC2B4B /* UserHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserHeaderView.xib; sourceTree = "<group>"; };
+		042885261E55897B00CC2B4B /* DisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayViewController.h; sourceTree = "<group>"; };
+		042885271E55897B00CC2B4B /* DisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayViewController.m; sourceTree = "<group>"; };
+		042885291E558A7400CC2B4B /* DisplaySectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplaySectionController.h; sourceTree = "<group>"; };
+		0428852A1E558A7400CC2B4B /* DisplaySectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplaySectionController.m; sourceTree = "<group>"; };
 		042A11701E4EAA4B0017582A /* DemosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemosViewController.h; sourceTree = "<group>"; };
 		042A11711E4EAA4B0017582A /* DemosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemosViewController.m; sourceTree = "<group>"; };
 		042A11741E4EAC3B0017582A /* DemoSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoSectionController.h; sourceTree = "<group>"; };
@@ -183,6 +189,8 @@
 				042885011E5537C300CC2B4B /* WorkingRangeViewController.m */,
 				042885151E5576D300CC2B4B /* SupplementaryViewController.h */,
 				042885161E5576D300CC2B4B /* SupplementaryViewController.m */,
+				042885261E55897B00CC2B4B /* DisplayViewController.h */,
+				042885271E55897B00CC2B4B /* DisplayViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -208,6 +216,8 @@
 				042885041E553BEF00CC2B4B /* WorkingRangeSectionController.m */,
 				0428851C1E557CA000CC2B4B /* FeedItemSectionController.h */,
 				0428851D1E557CA000CC2B4B /* FeedItemSectionController.m */,
+				042885291E558A7400CC2B4B /* DisplaySectionController.h */,
+				0428852A1E558A7400CC2B4B /* DisplaySectionController.m */,
 			);
 			path = SectionControllers;
 			sourceTree = "<group>";
@@ -538,8 +548,10 @@
 				154545381E53008800DC64A0 /* SearchCell.m in Sources */,
 				042884FF1E552A1600CC2B4B /* RemoveCell.m in Sources */,
 				042884FC1E5529F900CC2B4B /* RemoveSectionController.m in Sources */,
+				0428852B1E558A7400CC2B4B /* DisplaySectionController.m in Sources */,
 				042392771E541D0B00EF0366 /* GridSectionController.m in Sources */,
 				042A11721E4EAA4B0017582A /* DemosViewController.m in Sources */,
+				042885281E55897B00CC2B4B /* DisplayViewController.m in Sources */,
 				0423927D1E541D2100EF0366 /* CenterLabelCell.m in Sources */,
 				042A11801E4F06B50017582A /* SpinnerCell.m in Sources */,
 				042885171E5576D300CC2B4B /* SupplementaryViewController.m in Sources */,
