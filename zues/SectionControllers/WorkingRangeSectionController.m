@@ -54,7 +54,7 @@
 -(UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index{
     UICollectionViewCell *cell=[self.collectionContext dequeueReusableCellOfClass:index==0?[LabelCell class]:[ImageCell class] forSectionController:self atIndex:index];
     if (index==0) {
-        [(LabelCell *)cell label].text = [NSString stringWithFormat:@"%@ sec:%zi",self.urlString,index];
+        [(LabelCell *)cell label].text = [NSString stringWithFormat:@"%@ sec:%zi",self.urlString,[self.collectionContext sectionForSectionController:self]];
     }
     else{
         [(ImageCell *)cell setImage:self.downloadedImage];

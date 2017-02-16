@@ -24,6 +24,7 @@
 #import "MixedDataViewController.h"
 #import "EmptyViewController.h"
 #import "WorkingRangeViewController.h"
+#import "SupplementaryViewController.h"
 
 @interface DemosViewController ()<IGListAdapterDataSource>
 //IGListAdapter来控制collectionView的数据显示
@@ -71,7 +72,8 @@
                   [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"working range" controllerClass:[WorkingRangeViewController class] controllerIdentifier:nil],
-                  [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil], nil];
+                  [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
+                  [[DemoItem alloc] init:@"section头视图" controllerClass:[SupplementaryViewController class] controllerIdentifier:nil], nil];
     }
     return _demos;
 }

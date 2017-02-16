@@ -19,6 +19,11 @@
 		042885021E5537C300CC2B4B /* WorkingRangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042885011E5537C300CC2B4B /* WorkingRangeViewController.m */; };
 		042885051E553BEF00CC2B4B /* WorkingRangeSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042885041E553BEF00CC2B4B /* WorkingRangeSectionController.m */; };
 		042885081E553EB500CC2B4B /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042885071E553EB500CC2B4B /* ImageCell.m */; };
+		042885171E5576D300CC2B4B /* SupplementaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042885161E5576D300CC2B4B /* SupplementaryViewController.m */; };
+		0428851A1E55782D00CC2B4B /* FeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 042885191E55782D00CC2B4B /* FeedItem.m */; };
+		0428851E1E557CA000CC2B4B /* FeedItemSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0428851D1E557CA000CC2B4B /* FeedItemSectionController.m */; };
+		042885221E557E0C00CC2B4B /* UserHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042885201E557E0C00CC2B4B /* UserHeaderView.m */; };
+		042885251E55823C00CC2B4B /* UserHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042885241E55823C00CC2B4B /* UserHeaderView.xib */; };
 		042A11721E4EAA4B0017582A /* DemosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A11711E4EAA4B0017582A /* DemosViewController.m */; };
 		042A11761E4EAC3B0017582A /* DemoSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A11751E4EAC3B0017582A /* DemoSectionController.m */; };
 		042A117A1E4EB5080017582A /* LabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A11791E4EB5080017582A /* LabelCell.m */; };
@@ -83,6 +88,15 @@
 		042885041E553BEF00CC2B4B /* WorkingRangeSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkingRangeSectionController.m; sourceTree = "<group>"; };
 		042885061E553EB500CC2B4B /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
 		042885071E553EB500CC2B4B /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
+		042885151E5576D300CC2B4B /* SupplementaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupplementaryViewController.h; sourceTree = "<group>"; };
+		042885161E5576D300CC2B4B /* SupplementaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupplementaryViewController.m; sourceTree = "<group>"; };
+		042885181E55782D00CC2B4B /* FeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedItem.h; sourceTree = "<group>"; };
+		042885191E55782D00CC2B4B /* FeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedItem.m; sourceTree = "<group>"; };
+		0428851C1E557CA000CC2B4B /* FeedItemSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedItemSectionController.h; sourceTree = "<group>"; };
+		0428851D1E557CA000CC2B4B /* FeedItemSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedItemSectionController.m; sourceTree = "<group>"; };
+		0428851F1E557E0C00CC2B4B /* UserHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserHeaderView.h; sourceTree = "<group>"; };
+		042885201E557E0C00CC2B4B /* UserHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserHeaderView.m; sourceTree = "<group>"; };
+		042885241E55823C00CC2B4B /* UserHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserHeaderView.xib; sourceTree = "<group>"; };
 		042A11701E4EAA4B0017582A /* DemosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemosViewController.h; sourceTree = "<group>"; };
 		042A11711E4EAA4B0017582A /* DemosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemosViewController.m; sourceTree = "<group>"; };
 		042A11741E4EAC3B0017582A /* DemoSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoSectionController.h; sourceTree = "<group>"; };
@@ -167,6 +181,8 @@
 				042884F81E55267F00CC2B4B /* EmptyViewController.m */,
 				042885001E5537C300CC2B4B /* WorkingRangeViewController.h */,
 				042885011E5537C300CC2B4B /* WorkingRangeViewController.m */,
+				042885151E5576D300CC2B4B /* SupplementaryViewController.h */,
+				042885161E5576D300CC2B4B /* SupplementaryViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -190,6 +206,8 @@
 				042884FB1E5529F900CC2B4B /* RemoveSectionController.m */,
 				042885031E553BEF00CC2B4B /* WorkingRangeSectionController.h */,
 				042885041E553BEF00CC2B4B /* WorkingRangeSectionController.m */,
+				0428851C1E557CA000CC2B4B /* FeedItemSectionController.h */,
+				0428851D1E557CA000CC2B4B /* FeedItemSectionController.m */,
 			);
 			path = SectionControllers;
 			sourceTree = "<group>";
@@ -211,6 +229,9 @@
 				042884FE1E552A1600CC2B4B /* RemoveCell.m */,
 				042885061E553EB500CC2B4B /* ImageCell.h */,
 				042885071E553EB500CC2B4B /* ImageCell.m */,
+				0428851F1E557E0C00CC2B4B /* UserHeaderView.h */,
+				042885201E557E0C00CC2B4B /* UserHeaderView.m */,
+				042885241E55823C00CC2B4B /* UserHeaderView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -297,6 +318,8 @@
 			children = (
 				1545452A1E52B92900DC64A0 /* User.h */,
 				1545452B1E52B92900DC64A0 /* User.m */,
+				042885181E55782D00CC2B4B /* FeedItem.h */,
+				042885191E55782D00CC2B4B /* FeedItem.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -418,6 +441,7 @@
 			files = (
 				15135A8D1E4D6F620088B0D0 /* LaunchScreen.storyboard in Resources */,
 				15135A8A1E4D6F620088B0D0 /* Assets.xcassets in Resources */,
+				042885251E55823C00CC2B4B /* UserHeaderView.xib in Resources */,
 				15135A881E4D6F620088B0D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +528,9 @@
 				042A117D1E4F01FF0017582A /* LoadMoreViewController.m in Sources */,
 				042392861E54310C00EF0366 /* DetailLabelCell.m in Sources */,
 				042A11831E4F09890017582A /* LabelSectionController.m in Sources */,
+				0428851A1E55782D00CC2B4B /* FeedItem.m in Sources */,
+				0428851E1E557CA000CC2B4B /* FeedItemSectionController.m in Sources */,
+				042885221E557E0C00CC2B4B /* UserHeaderView.m in Sources */,
 				15135A821E4D6F620088B0D0 /* AppDelegate.m in Sources */,
 				15135A7F1E4D6F620088B0D0 /* main.m in Sources */,
 				1545452C1E52B92900DC64A0 /* User.m in Sources */,
@@ -515,6 +542,7 @@
 				042A11721E4EAA4B0017582A /* DemosViewController.m in Sources */,
 				0423927D1E541D2100EF0366 /* CenterLabelCell.m in Sources */,
 				042A11801E4F06B50017582A /* SpinnerCell.m in Sources */,
+				042885171E5576D300CC2B4B /* SupplementaryViewController.m in Sources */,
 				0423927A1E541D1400EF0366 /* MixedDataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

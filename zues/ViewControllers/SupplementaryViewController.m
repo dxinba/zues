@@ -1,5 +1,5 @@
 //
-//  WorkingRangeViewController.m
+//  SupplementaryViewController.m
 //  zues
 //
 //  Created by mac on 2017/2/16.
@@ -17,21 +17,23 @@
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import "WorkingRangeViewController.h"
+#import "SupplementaryViewController.h"
 #import <IGListKit.h>
-#import "WorkingRangeSectionController.h"
+#import "FeedItem.h"
+#import "User.h"
+#import "FeedItemSectionController.h"
 
-@interface WorkingRangeViewController ()<IGListAdapterDataSource>
+@interface SupplementaryViewController ()<IGListAdapterDataSource>
 @property (nonatomic,strong) IGListAdapter *adapter;
 @property (nonatomic,strong) IGListCollectionView *collectionView;
-@property (nonatomic,strong) NSMutableArray *data;
+@property (nonatomic,strong) NSMutableArray *feedItems;
 @end
 
-@implementation WorkingRangeViewController
+@implementation SupplementaryViewController
 
 -(IGListAdapter *)adapter{
     if (!_adapter) {
-        _adapter = [[IGListAdapter alloc] initWithUpdater:[IGListAdapterUpdater new] viewController:self workingRangeSize:2];//预处理当前可视的最大section+2，比如现在可视最大setion为2，则预处理3，4
+        _adapter = [[IGListAdapter alloc] initWithUpdater:[IGListAdapterUpdater new] viewController:self workingRangeSize:0];
     }
     return _adapter;
 }
@@ -43,18 +45,15 @@
     return _collectionView;
 }
 
-- (NSMutableArray *)data {
-    if (!_data) {
-        NSMutableIndexSet *set=[NSMutableIndexSet indexSet];
-        while (set.count<20) {
-            [set addIndex:arc4random_uniform(200)+200];
-        }
-        _data = [NSMutableArray array];
-        [set enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {
-            [_data addObject:@(idx)];
-        }];
+- (NSMutableArray *)feedItems {
+    if (!_feedItems) {
+        _feedItems = [NSMutableArray arrayWithObjects:
+                      [[FeedItem alloc] init:@1 user:[[User alloc] initWithPk:@100 name:@"Jesse" handle:@"jesse_squires"] comments:[NSMutableArray arrayWithObjects:@"你真牛！", @"你确定吗？", nil]],
+                      [[FeedItem alloc] init:@2 user:[[User alloc] initWithPk:@101 name:@"Ryan" handle:@"_ryannystrom"] comments:[NSMutableArray arrayWithObjects:@"这个对我太好了",@"😁", @"让我们试试吧！", nil]],
+                      [[FeedItem alloc] init:@3 user:[[User alloc] initWithPk:@102 name:@"Ann" handle:@"abaum"] comments:[NSMutableArray arrayWithObjects:@"祝你好运！", nil]],
+                      [[FeedItem alloc] init:@4 user:[[User alloc] initWithPk:@103 name:@"Phil" handle:@"phil"] comments:[NSMutableArray arrayWithObjects:@"yoooooooo", @"预计时间多少", nil]], nil];
     }
-    return _data;
+    return _feedItems;
 }
 
 - (void)viewDidLoad {
@@ -70,13 +69,12 @@
     _collectionView.frame=self.view.bounds;
 }
 
-// MARK: IGListAdapterDataSource
 -(NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter{
-    return self.data;
+    return self.feedItems;
 }
 
 -(IGListSectionController<IGListSectionType> *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object{
-    return [WorkingRangeSectionController new];
+    return [FeedItemSectionController new];
 }
 
 -(UIView *)emptyViewForListAdapter:(IGListAdapter *)listAdapter{
