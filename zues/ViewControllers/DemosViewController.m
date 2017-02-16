@@ -22,6 +22,8 @@
 #import "DemoSectionController.h"
 #import "LoadMoreViewController.h"
 #import "MixedDataViewController.h"
+#import "EmptyViewController.h"
+#import "WorkingRangeViewController.h"
 
 @interface DemosViewController ()<IGListAdapterDataSource>
 //IGListAdapter来控制collectionView的数据显示
@@ -64,7 +66,12 @@
                   [[DemoItem alloc] init:@"上拉加载" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"混合数据" controllerClass:[MixedDataViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"阿斯顿发的说法的" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil],
-                  [[DemoItem alloc] init:@"上拉加载" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil], nil];
+                  [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
+                  [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
+                  [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
+                  [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
+                  [[DemoItem alloc] init:@"working range" controllerClass:[WorkingRangeViewController class] controllerIdentifier:nil],
+                  [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil], nil];
     }
     return _demos;
 }
