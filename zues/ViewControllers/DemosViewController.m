@@ -27,6 +27,8 @@
 #import "SupplementaryViewController.h"
 #import "DisplayViewController.h"
 
+#import "SearchViewController.h"
+
 @interface DemosViewController ()<IGListAdapterDataSource>
 //IGListAdapter来控制collectionView的数据显示
 @property (nonatomic,strong) IGListAdapter *adapter;
@@ -72,6 +74,7 @@
                   [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
+                  [[DemoItem alloc] init:@"Search Autocomplete 搜索" controllerClass:[SearchViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"working range" controllerClass:[WorkingRangeViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"section头视图" controllerClass:[SupplementaryViewController class] controllerIdentifier:nil],

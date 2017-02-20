@@ -38,6 +38,9 @@
     if (self==object) {//指针地址比较
         return YES;
     }
+    if (![object isKindOfClass:[self class]]) {
+        return NO;
+    }
     return [_name isEqualToString:object.name] && [_handle isEqualToString:object.handle];
 }
 

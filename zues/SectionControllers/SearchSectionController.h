@@ -7,15 +7,16 @@
 //
 
 #import <IGListKit/IGListKit.h>
-
 @protocol SearchSectionControllerDelegate <NSObject>
+//func searchSectionController(_ sectionController: SearchSectionController, didChangeText text: String)
 
-
+//- (void)searchSectionController:(SearchSectionController *)sectionController didChangeText:(NSString *)text;
 
 @end
+
 @interface SearchSectionController : IGListSectionController<IGListSectionType, UISearchBarDelegate, IGListScrollDelegate>
 
-/** <#注释#> */
+/**  */
 @property (weak, nonatomic) id<SearchSectionControllerDelegate> delegate;
 
 @end

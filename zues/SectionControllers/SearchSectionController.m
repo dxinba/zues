@@ -38,6 +38,23 @@
 
 - (void)didSelectItemAtIndex:(NSInteger)index { }
 
+// MARK: UISearchBarDelegate
+- (void)listAdapter:(IGListAdapter *)listAdapter didScrollSectionController:(IGListSectionController<IGListSectionType> *)sectionController {
+    UISearchBar *searchBar = [[UISearchBar alloc]init];
+//    if (searchBar == [self.collectionContext cellForItemAtIndex:0 sectionController:self] ) {
+//        searchBar.text = @"";
+//        [searchBar resignFirstResponder];
+//    }
+}
+
+- (void)listAdapter:(IGListAdapter *)listAdapter willBeginDraggingSectionController:(IGListSectionController<IGListSectionType> *)sectionController {
+    
+}
+
+- (void)listAdapter:(IGListAdapter *)listAdapter didEndDraggingSectionController:(IGListSectionController<IGListSectionType> *)sectionController willDecelerate:(BOOL)decelerate {
+    
+}
+
 
 
 @end

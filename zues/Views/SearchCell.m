@@ -10,4 +10,18 @@
 
 @implementation SearchCell
 
+- (UISearchBar *)searchBar {
+    UISearchBar *searchBar = [[UISearchBar alloc]init];
+    searchBar = self.searchBar;
+    [self.contentView addSubview:searchBar];
+    return searchBar;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.searchBar.frame = self.contentView.bounds;
+}
+
+
+
 @end
