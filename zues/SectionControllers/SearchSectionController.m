@@ -38,7 +38,7 @@
 
 - (void)didSelectItemAtIndex:(NSInteger)index { }
 
-//MARK: UISearchBarDelegate
+// MARK: UISearchBarDelegate
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     [self.delegate searchSectionController:self didChangeText:searchText];
 }
@@ -49,10 +49,10 @@
 
 // MARK: IGListScrollDelegate
 - (void)listAdapter:(IGListAdapter *)listAdapter didScrollSectionController:(IGListSectionController<IGListSectionType> *)sectionController {
-    SearchCell *searchBar = [self.collectionContext cellForItemAtIndex:0 sectionController:self];
-    if (searchBar) {
-        searchBar.searchBar.text = @"";
-        [searchBar.searchBar resignFirstResponder];
+    SearchCell *searchCell = [self.collectionContext cellForItemAtIndex:0 sectionController:self];
+    if (searchCell) {
+        searchCell.searchBar.text = @"";
+        [searchCell.searchBar resignFirstResponder];
     }
 }
 

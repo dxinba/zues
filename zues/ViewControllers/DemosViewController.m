@@ -26,7 +26,6 @@
 #import "WorkingRangeViewController.h"
 #import "SupplementaryViewController.h"
 #import "DisplayViewController.h"
-
 #import "SearchViewController.h"
 
 @interface DemosViewController ()<IGListAdapterDataSource>
@@ -67,7 +66,7 @@
          */
         _demos = [NSMutableArray arrayWithObjects:
                   [[DemoItem alloc] init:@"上拉加载" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil],
-                  [[DemoItem alloc] init:@"上拉加载" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil],
+                  [[DemoItem alloc] init:@"Search Autocomplete 搜索" controllerClass:[SearchViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"混合数据" controllerClass:[MixedDataViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"阿斯顿发的说法的" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
