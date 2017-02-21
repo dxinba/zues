@@ -7,7 +7,7 @@
 //
 
 #import "SearchViewController.h"
-
+#import "LabelSectionController.h"
 @interface SearchViewController ()
 
 
@@ -26,6 +26,7 @@
     _adapter.dataSource = self;
     
     _searchToken = @42;
+    self.filterString = @"";
 }
 
 - (IGListAdapter *)adapter {
@@ -36,14 +37,14 @@
     return @"";
 }
 
-- (NSString *)words{
+- (NSArray *)words{
     NSString *str = @"Humblebrag skateboard tacos viral small batch blue bottle, schlitz fingerstache etsy squid. Listicle tote bag helvetica XOXO literally, meggings cardigan kickstarter roof party deep v selvage scenester venmo truffaut. You probably haven't heard of them fanny pack austin next level 3 wolf moon. Everyday carry offal brunch 8-bit, keytar banjo pinterest leggings hashtag wolf raw denim butcher. Single-origin coffee try-hard echo park neutra, cornhole banh mi meh austin readymade tacos taxidermy pug tattooed. Cold-pressed +1 ethical, four loko cardigan meh forage YOLO health goth sriracha kale chips. Mumblecore cardigan humblebrag, lo-fi typewriter truffaut leggings health goth.";
-    NSMutableString *words = [NSMutableString string];
-//    NSRange range = str.length;
-//    [str enumerateSubstringsInRange:range options:NSStringEnumerationByWords usingBlock:^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {
-//        
-//    }];
-    return nil;
+    NSMutableArray *words = [NSMutableArray array];
+    NSString *subString = @" ";
+    [str enumerateSubstringsInRange:NSMakeRange(0, str.length) options:NSStringEnumerationByWords usingBlock:^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {
+        [words addObject:subString];
+    }];
+    return words;
 }
 
 - (void)viewDidLayoutSubviews {
@@ -53,19 +54,28 @@
 
 // MARK: IGListAdapterDataSource
 - (NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter {
-//    guard filterString != "" else { return [searchToken] + words.map { $0 as IGListDiffable } }
-//    return [searchToken] + words.filter { $0.lowercased().contains(filterString.lowercased()) }.map { $0 as IGListDiffable }
-    return @[@0];
+    if ([self.filterString isEqualToString:@""]) {
+        NSArray *arr = [NSArray arrayWithObjects:_searchToken, _words[0], nil];
+        return arr;
+    }
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:_searchToken, nil];
+    for (NSString *filter in _words) {
+        if ([filter.lowercaseString isEqualToString:_filterString.lowercaseString]) {
+            [arr addObject:filter];
+        }
+    }
+    return arr;
 }
 
-//- (IGListSectionController<IGListSectionType> *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object {
-//    id obj = object;
-//    if (obj == object) {
-//        SearchSectionController *sectionController = [[SearchSectionController alloc]init];
-//        sectionController.delegate = self;
-//        return sectionController;
-//    }
-//}
+- (IGListSectionController<IGListSectionType> *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object {
+    NSNumber *obj = object;
+    if (obj == _searchToken) {
+        SearchSectionController *sectionController = [[SearchSectionController alloc]init];
+        sectionController.delegate = self;
+        return sectionController;
+    }
+    else return [LabelSectionController new];
+}
 
 - (UIView *)emptyViewForListAdapter:(IGListAdapter *)listAdapter {
     return nil;
@@ -73,5 +83,9 @@
 
 // MARK：SearchSectionControllerDelegate
 
+- (void)searchSectionController:(SearchSectionController *)sectionController didChangeText:(NSString *)text {
+    self.filterString = text;
+    [self.adapter performUpdatesAnimated:YES completion:nil];
+}
 
 @end

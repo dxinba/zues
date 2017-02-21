@@ -13,7 +13,7 @@
 /** <#注释#> */
 @property (strong, nonatomic) IGListAdapter *adapter;
 /** <#注释#> */
-@property (strong, nonatomic) NSString *words;
+@property (strong, nonatomic) NSArray *words;
 /** <#注释#> */
 @property (strong, nonatomic) NSString *filterString;
 @end

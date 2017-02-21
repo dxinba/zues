@@ -38,22 +38,27 @@
 
 - (void)didSelectItemAtIndex:(NSInteger)index { }
 
-// MARK: UISearchBarDelegate
+//MARK: UISearchBarDelegate
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    [self.delegate searchSectionController:self didChangeText:searchText];
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+    [self.delegate searchSectionController:self didChangeText:@""];
+}
+
+// MARK: IGListScrollDelegate
 - (void)listAdapter:(IGListAdapter *)listAdapter didScrollSectionController:(IGListSectionController<IGListSectionType> *)sectionController {
-    UISearchBar *searchBar = [[UISearchBar alloc]init];
-//    if (searchBar == [self.collectionContext cellForItemAtIndex:0 sectionController:self] ) {
-//        searchBar.text = @"";
-//        [searchBar resignFirstResponder];
-//    }
+    SearchCell *searchBar = [self.collectionContext cellForItemAtIndex:0 sectionController:self];
+    if (searchBar) {
+        searchBar.searchBar.text = @"";
+        [searchBar.searchBar resignFirstResponder];
+    }
 }
 
-- (void)listAdapter:(IGListAdapter *)listAdapter willBeginDraggingSectionController:(IGListSectionController<IGListSectionType> *)sectionController {
-    
-}
+- (void)listAdapter:(IGListAdapter *)listAdapter willBeginDraggingSectionController:(IGListSectionController<IGListSectionType> *)sectionController { }
 
-- (void)listAdapter:(IGListAdapter *)listAdapter didEndDraggingSectionController:(IGListSectionController<IGListSectionType> *)sectionController willDecelerate:(BOOL)decelerate {
-    
-}
+- (void)listAdapter:(IGListAdapter *)listAdapter didEndDraggingSectionController:(IGListSectionController<IGListSectionType> *)sectionController willDecelerate:(BOOL)decelerate { }
 
 
 

@@ -7,10 +7,11 @@
 //
 
 #import <IGListKit/IGListKit.h>
-@protocol SearchSectionControllerDelegate <NSObject>
-//func searchSectionController(_ sectionController: SearchSectionController, didChangeText text: String)
 
-//- (void)searchSectionController:(SearchSectionController *)sectionController didChangeText:(NSString *)text;
+@class SearchSectionController;
+@protocol SearchSectionControllerDelegate <NSObject>
+
+- (void)searchSectionController:(SearchSectionController *)sectionController didChangeText:(NSString *)text;
 
 @end
 
