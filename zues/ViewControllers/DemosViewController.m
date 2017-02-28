@@ -27,6 +27,8 @@
 #import "SupplementaryViewController.h"
 #import "DisplayViewController.h"
 #import "SearchViewController.h"
+#import "StackedViewController.h"
+#import "SelfSizingCellsViewController.h"
 
 @interface DemosViewController ()<IGListAdapterDataSource>
 //IGListAdapter来控制collectionView的数据显示
@@ -76,9 +78,9 @@
                   [[DemoItem alloc] init:@"Search Autocomplete 搜索" controllerClass:[SearchViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"working range" controllerClass:[WorkingRangeViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
-                  [[DemoItem alloc] init:@"section头视图" controllerClass:[SupplementaryViewController class] controllerIdentifier:nil],
-                  [[DemoItem alloc] init:@"显示delegate" controllerClass:[DisplayViewController class] controllerIdentifier:nil],
-                  [[DemoItem alloc] init:@"section头视图" controllerClass:[SupplementaryViewController class] controllerIdentifier:nil],nil];
+                  [[DemoItem alloc] init:@"自适应cells" controllerClass:[SelfSizingCellsViewController class] controllerIdentifier:nil],
+                  [[DemoItem alloc] init:@"滚动过程中cell的显示或隐藏delegate回调" controllerClass:[DisplayViewController class] controllerIdentifier:nil],
+                  [[DemoItem alloc] init:@"Stacked Section Controllers" controllerClass:[StackedViewController class] controllerIdentifier:nil],nil];
     }
     return _demos;
 }

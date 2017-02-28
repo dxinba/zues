@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040DAD901E65085700CB4681 /* StackedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DAD8F1E65085700CB4681 /* StackedViewController.m */; };
+		040DAD931E650A4B00CB4681 /* HorizontalSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DAD921E650A4B00CB4681 /* HorizontalSectionController.m */; };
+		040DAD961E650E3100CB4681 /* EmbeddedSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DAD951E650E3100CB4681 /* EmbeddedSectionController.m */; };
+		040DAD991E65100800CB4681 /* EmbeddedCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DAD981E65100800CB4681 /* EmbeddedCollectionViewCell.m */; };
+		040DAD9C1E6514C000CB4681 /* SelfSizingCellsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DAD9B1E6514C000CB4681 /* SelfSizingCellsViewController.m */; };
+		040DAD9F1E6515BA00CB4681 /* SelectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DAD9E1E6515BA00CB4681 /* SelectionModel.m */; };
+		040DADA21E65186B00CB4681 /* SelfSizingSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DADA11E65186B00CB4681 /* SelfSizingSectionController.m */; };
+		040DADA51E6519AC00CB4681 /* ManuallySelfSizingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DADA41E6519AC00CB4681 /* ManuallySelfSizingCell.m */; };
+		040DADA81E651C9500CB4681 /* FullWidthSelfSizingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DADA71E651C9500CB4681 /* FullWidthSelfSizingCell.m */; };
+		040DADAB1E651DBA00CB4681 /* NibSelfSizingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DADAA1E651DBA00CB4681 /* NibSelfSizingCell.m */; };
+		040DADAD1E651DE900CB4681 /* NibSelfSizingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040DADAC1E651DE900CB4681 /* NibSelfSizingCell.xib */; };
 		042392771E541D0B00EF0366 /* GridSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042392761E541D0B00EF0366 /* GridSectionController.m */; };
 		0423927A1E541D1400EF0366 /* MixedDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042392791E541D1400EF0366 /* MixedDataViewController.m */; };
 		0423927D1E541D2100EF0366 /* CenterLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0423927C1E541D2100EF0366 /* CenterLabelCell.m */; };
@@ -66,6 +77,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040DAD8E1E65085700CB4681 /* StackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackedViewController.h; sourceTree = "<group>"; };
+		040DAD8F1E65085700CB4681 /* StackedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackedViewController.m; sourceTree = "<group>"; };
+		040DAD911E650A4B00CB4681 /* HorizontalSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalSectionController.h; sourceTree = "<group>"; };
+		040DAD921E650A4B00CB4681 /* HorizontalSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalSectionController.m; sourceTree = "<group>"; };
+		040DAD941E650E3100CB4681 /* EmbeddedSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmbeddedSectionController.h; sourceTree = "<group>"; };
+		040DAD951E650E3100CB4681 /* EmbeddedSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmbeddedSectionController.m; sourceTree = "<group>"; };
+		040DAD971E65100800CB4681 /* EmbeddedCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmbeddedCollectionViewCell.h; sourceTree = "<group>"; };
+		040DAD981E65100800CB4681 /* EmbeddedCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmbeddedCollectionViewCell.m; sourceTree = "<group>"; };
+		040DAD9A1E6514C000CB4681 /* SelfSizingCellsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfSizingCellsViewController.h; sourceTree = "<group>"; };
+		040DAD9B1E6514C000CB4681 /* SelfSizingCellsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfSizingCellsViewController.m; sourceTree = "<group>"; };
+		040DAD9D1E6515BA00CB4681 /* SelectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionModel.h; sourceTree = "<group>"; };
+		040DAD9E1E6515BA00CB4681 /* SelectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionModel.m; sourceTree = "<group>"; };
+		040DADA01E65186B00CB4681 /* SelfSizingSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfSizingSectionController.h; sourceTree = "<group>"; };
+		040DADA11E65186B00CB4681 /* SelfSizingSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfSizingSectionController.m; sourceTree = "<group>"; };
+		040DADA31E6519AC00CB4681 /* ManuallySelfSizingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManuallySelfSizingCell.h; sourceTree = "<group>"; };
+		040DADA41E6519AC00CB4681 /* ManuallySelfSizingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManuallySelfSizingCell.m; sourceTree = "<group>"; };
+		040DADA61E651C9500CB4681 /* FullWidthSelfSizingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullWidthSelfSizingCell.h; sourceTree = "<group>"; };
+		040DADA71E651C9500CB4681 /* FullWidthSelfSizingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullWidthSelfSizingCell.m; sourceTree = "<group>"; };
+		040DADA91E651DBA00CB4681 /* NibSelfSizingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NibSelfSizingCell.h; sourceTree = "<group>"; };
+		040DADAA1E651DBA00CB4681 /* NibSelfSizingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NibSelfSizingCell.m; sourceTree = "<group>"; };
+		040DADAC1E651DE900CB4681 /* NibSelfSizingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibSelfSizingCell.xib; sourceTree = "<group>"; };
 		042392751E541D0B00EF0366 /* GridSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridSectionController.h; sourceTree = "<group>"; };
 		042392761E541D0B00EF0366 /* GridSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridSectionController.m; sourceTree = "<group>"; };
 		042392781E541D1400EF0366 /* MixedDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixedDataViewController.h; sourceTree = "<group>"; };
@@ -191,6 +223,10 @@
 				042885161E5576D300CC2B4B /* SupplementaryViewController.m */,
 				042885261E55897B00CC2B4B /* DisplayViewController.h */,
 				042885271E55897B00CC2B4B /* DisplayViewController.m */,
+				040DAD8E1E65085700CB4681 /* StackedViewController.h */,
+				040DAD8F1E65085700CB4681 /* StackedViewController.m */,
+				040DAD9A1E6514C000CB4681 /* SelfSizingCellsViewController.h */,
+				040DAD9B1E6514C000CB4681 /* SelfSizingCellsViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -218,6 +254,12 @@
 				0428851D1E557CA000CC2B4B /* FeedItemSectionController.m */,
 				042885291E558A7400CC2B4B /* DisplaySectionController.h */,
 				0428852A1E558A7400CC2B4B /* DisplaySectionController.m */,
+				040DAD911E650A4B00CB4681 /* HorizontalSectionController.h */,
+				040DAD921E650A4B00CB4681 /* HorizontalSectionController.m */,
+				040DAD941E650E3100CB4681 /* EmbeddedSectionController.h */,
+				040DAD951E650E3100CB4681 /* EmbeddedSectionController.m */,
+				040DADA01E65186B00CB4681 /* SelfSizingSectionController.h */,
+				040DADA11E65186B00CB4681 /* SelfSizingSectionController.m */,
 			);
 			path = SectionControllers;
 			sourceTree = "<group>";
@@ -242,6 +284,15 @@
 				0428851F1E557E0C00CC2B4B /* UserHeaderView.h */,
 				042885201E557E0C00CC2B4B /* UserHeaderView.m */,
 				042885241E55823C00CC2B4B /* UserHeaderView.xib */,
+				040DAD971E65100800CB4681 /* EmbeddedCollectionViewCell.h */,
+				040DAD981E65100800CB4681 /* EmbeddedCollectionViewCell.m */,
+				040DADA31E6519AC00CB4681 /* ManuallySelfSizingCell.h */,
+				040DADA41E6519AC00CB4681 /* ManuallySelfSizingCell.m */,
+				040DADA61E651C9500CB4681 /* FullWidthSelfSizingCell.h */,
+				040DADA71E651C9500CB4681 /* FullWidthSelfSizingCell.m */,
+				040DADA91E651DBA00CB4681 /* NibSelfSizingCell.h */,
+				040DADAA1E651DBA00CB4681 /* NibSelfSizingCell.m */,
+				040DADAC1E651DE900CB4681 /* NibSelfSizingCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -330,6 +381,8 @@
 				1545452B1E52B92900DC64A0 /* User.m */,
 				042885181E55782D00CC2B4B /* FeedItem.h */,
 				042885191E55782D00CC2B4B /* FeedItem.m */,
+				040DAD9D1E6515BA00CB4681 /* SelectionModel.h */,
+				040DAD9E1E6515BA00CB4681 /* SelectionModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -452,6 +505,7 @@
 				15135A8D1E4D6F620088B0D0 /* LaunchScreen.storyboard in Resources */,
 				15135A8A1E4D6F620088B0D0 /* Assets.xcassets in Resources */,
 				042885251E55823C00CC2B4B /* UserHeaderView.xib in Resources */,
+				040DADAD1E651DE900CB4681 /* NibSelfSizingCell.xib in Resources */,
 				15135A881E4D6F620088B0D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +581,8 @@
 			files = (
 				15135A851E4D6F620088B0D0 /* ViewController.m in Sources */,
 				042885051E553BEF00CC2B4B /* WorkingRangeSectionController.m in Sources */,
+				040DAD9C1E6514C000CB4681 /* SelfSizingCellsViewController.m in Sources */,
+				040DAD991E65100800CB4681 /* EmbeddedCollectionViewCell.m in Sources */,
 				154545351E52FFC400DC64A0 /* SearchSectionController.m in Sources */,
 				042885021E5537C300CC2B4B /* WorkingRangeViewController.m in Sources */,
 				042392831E54307700EF0366 /* UserSectionController.m in Sources */,
@@ -537,10 +593,13 @@
 				042A117A1E4EB5080017582A /* LabelCell.m in Sources */,
 				042A117D1E4F01FF0017582A /* LoadMoreViewController.m in Sources */,
 				042392861E54310C00EF0366 /* DetailLabelCell.m in Sources */,
+				040DAD9F1E6515BA00CB4681 /* SelectionModel.m in Sources */,
 				042A11831E4F09890017582A /* LabelSectionController.m in Sources */,
 				0428851A1E55782D00CC2B4B /* FeedItem.m in Sources */,
+				040DADA51E6519AC00CB4681 /* ManuallySelfSizingCell.m in Sources */,
 				0428851E1E557CA000CC2B4B /* FeedItemSectionController.m in Sources */,
 				042885221E557E0C00CC2B4B /* UserHeaderView.m in Sources */,
+				040DAD901E65085700CB4681 /* StackedViewController.m in Sources */,
 				15135A821E4D6F620088B0D0 /* AppDelegate.m in Sources */,
 				15135A7F1E4D6F620088B0D0 /* main.m in Sources */,
 				1545452C1E52B92900DC64A0 /* User.m in Sources */,
@@ -548,12 +607,17 @@
 				154545381E53008800DC64A0 /* SearchCell.m in Sources */,
 				042884FF1E552A1600CC2B4B /* RemoveCell.m in Sources */,
 				042884FC1E5529F900CC2B4B /* RemoveSectionController.m in Sources */,
+				040DADAB1E651DBA00CB4681 /* NibSelfSizingCell.m in Sources */,
 				0428852B1E558A7400CC2B4B /* DisplaySectionController.m in Sources */,
+				040DAD961E650E3100CB4681 /* EmbeddedSectionController.m in Sources */,
 				042392771E541D0B00EF0366 /* GridSectionController.m in Sources */,
+				040DAD931E650A4B00CB4681 /* HorizontalSectionController.m in Sources */,
 				042A11721E4EAA4B0017582A /* DemosViewController.m in Sources */,
 				042885281E55897B00CC2B4B /* DisplayViewController.m in Sources */,
+				040DADA21E65186B00CB4681 /* SelfSizingSectionController.m in Sources */,
 				0423927D1E541D2100EF0366 /* CenterLabelCell.m in Sources */,
 				042A11801E4F06B50017582A /* SpinnerCell.m in Sources */,
+				040DADA81E651C9500CB4681 /* FullWidthSelfSizingCell.m in Sources */,
 				042885171E5576D300CC2B4B /* SupplementaryViewController.m in Sources */,
 				0423927A1E541D1400EF0366 /* MixedDataViewController.m in Sources */,
 			);
