@@ -29,6 +29,7 @@
 #import "SearchViewController.h"
 #import "StackedViewController.h"
 #import "SelfSizingCellsViewController.h"
+#import "NestedAdapterViewController.h"
 
 @interface DemosViewController ()<IGListAdapterDataSource>
 //IGListAdapter来控制collectionView的数据显示
@@ -70,7 +71,7 @@
                   [[DemoItem alloc] init:@"上拉加载" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"Search Autocomplete 搜索" controllerClass:[SearchViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"混合数据" controllerClass:[MixedDataViewController class] controllerIdentifier:nil],
-                  [[DemoItem alloc] init:@"阿斯顿发的说法的" controllerClass:[LoadMoreViewController class] controllerIdentifier:nil],
+                  [[DemoItem alloc] init:@"Nested Adapter" controllerClass:[NestedAdapterViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],

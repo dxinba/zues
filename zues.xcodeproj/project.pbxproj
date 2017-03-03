@@ -51,6 +51,7 @@
 		15135A8D1E4D6F620088B0D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15135A8B1E4D6F620088B0D0 /* LaunchScreen.storyboard */; };
 		15135A981E4D6F620088B0D0 /* zuesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15135A971E4D6F620088B0D0 /* zuesTests.m */; };
 		15135AA31E4D6F620088B0D0 /* zuesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15135AA21E4D6F620088B0D0 /* zuesUITests.m */; };
+		152A8B671E691313004D9147 /* NestedAdapterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 152A8B661E691313004D9147 /* NestedAdapterViewController.m */; };
 		1545451A1E5166D300DC64A0 /* libIGListKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 154545191E5166D300DC64A0 /* libIGListKit.a */; };
 		1545452C1E52B92900DC64A0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1545452B1E52B92900DC64A0 /* User.m */; };
 		1545452F1E52F90C00DC64A0 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1545452E1E52F90C00DC64A0 /* SearchViewController.m */; };
@@ -163,6 +164,8 @@
 		15135A9E1E4D6F620088B0D0 /* zuesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zuesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15135AA21E4D6F620088B0D0 /* zuesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zuesUITests.m; sourceTree = "<group>"; };
 		15135AA41E4D6F620088B0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		152A8B651E691313004D9147 /* NestedAdapterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NestedAdapterViewController.h; sourceTree = "<group>"; };
+		152A8B661E691313004D9147 /* NestedAdapterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NestedAdapterViewController.m; sourceTree = "<group>"; };
 		154545191E5166D300DC64A0 /* libIGListKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIGListKit.a; path = "../../../Library/Developer/Xcode/DerivedData/zues-cllvjwrtoapsgxfdkvsxqhreisxu/Build/Products/Debug-iphonesimulator/IGListKit/libIGListKit.a"; sourceTree = "<group>"; };
 		1545452A1E52B92900DC64A0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		1545452B1E52B92900DC64A0 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 				040DAD951E650E3100CB4681 /* EmbeddedSectionController.m */,
 				040DADA01E65186B00CB4681 /* SelfSizingSectionController.h */,
 				040DADA11E65186B00CB4681 /* SelfSizingSectionController.m */,
+				152A8B651E691313004D9147 /* NestedAdapterViewController.h */,
+				152A8B661E691313004D9147 /* NestedAdapterViewController.m */,
 			);
 			path = SectionControllers;
 			sourceTree = "<group>";
@@ -606,6 +611,7 @@
 				042885081E553EB500CC2B4B /* ImageCell.m in Sources */,
 				154545381E53008800DC64A0 /* SearchCell.m in Sources */,
 				042884FF1E552A1600CC2B4B /* RemoveCell.m in Sources */,
+				152A8B671E691313004D9147 /* NestedAdapterViewController.m in Sources */,
 				042884FC1E5529F900CC2B4B /* RemoveSectionController.m in Sources */,
 				040DADAB1E651DBA00CB4681 /* NibSelfSizingCell.m in Sources */,
 				0428852B1E558A7400CC2B4B /* DisplaySectionController.m in Sources */,

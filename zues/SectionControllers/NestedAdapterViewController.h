@@ -1,11 +1,13 @@
 //
-//  SearchSectionController.h
+//  NestedAdapterViewController.h
 //  zues
 //
-//  Created by v on 17/2/14.
+//  Created by v on 17/3/3.
 //  Copyright © 2017年 v. All rights reserved.
 //
-/** 
+/**
+ Copyright (c) 2016-present, Facebook, Inc. All rights reserved.
+ 
  The examples provided by Facebook are for non-commercial testing and evaluation
  purposes only. Facebook reserves all rights not expressly granted.
  
@@ -16,19 +18,8 @@
  ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-#import <IGListKit/IGListKit.h>
+#import <UIKit/UIKit.h>
 
-@class SearchSectionController;
-@protocol SearchSectionControllerDelegate <NSObject>
-
-- (void)searchSectionController:(SearchSectionController *)sectionController didChangeText:(NSString *)text;
+@interface NestedAdapterViewController : UIViewController
 
 @end
-
-@interface SearchSectionController : IGListSectionController<IGListSectionType, UISearchBarDelegate, IGListScrollDelegate>
-
-/**  */
-@property (weak, nonatomic) id<SearchSectionControllerDelegate> delegate;
-
-@end
-
