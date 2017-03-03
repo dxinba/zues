@@ -28,7 +28,7 @@
 /** IGListCollectionView */
 @property (strong, nonatomic) IGListCollectionView *collectionView;
 /** data */
-@property (strong, nonatomic) NSArray<IGListDiffable> *data;
+@property (strong, nonatomic) NSArray *data;
 @end
 
 @implementation NestedAdapterViewController
@@ -80,7 +80,7 @@
 
 // MARK：IGListAdapterDataSource
 - (NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter {
-    return self.data;
+    return _data;
 }
 
 - (IGListSectionController<IGListSectionType> *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object {
