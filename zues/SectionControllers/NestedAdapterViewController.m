@@ -67,9 +67,9 @@
               @"Tellus Nibh Ipsum Inceptos",
               @2];
     
-    [self.view addSubview:_collectionView];
-    _adapter.collectionView = _collectionView;
-    _adapter.dataSource = self;
+    [self.view addSubview:self.collectionView];
+    self.adapter.collectionView = self.collectionView;
+    self.adapter.dataSource = self;
     
 }
 
