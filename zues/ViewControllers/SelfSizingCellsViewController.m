@@ -21,7 +21,7 @@
 
 -(IGListAdapter *)adapter{
     if (!_adapter) {
-        _adapter = [[IGListAdapter alloc] initWithUpdater:[IGListAdapterUpdater new] viewController:self workingRangeSize:1];
+        _adapter = [[IGListAdapter alloc] initWithUpdater:[IGListAdapterUpdater new] viewController:self workingRangeSize:0];
     }
     return _adapter;
 }

@@ -144,7 +144,10 @@
 -(void)didSelectItemAtIndex:(NSInteger)index{
     //一个row的点击事件
     if (_object.controllerIdentifier) {//跳转sb
-        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Demo" bundle:nil];
+        UIViewController *controller=[storyboard instantiateViewControllerWithIdentifier:_object.controllerIdentifier];
+        controller.title=_object.name;
+        [self.viewController.navigationController pushViewController:controller animated:YES];
     }
     else if (_object.controllerClass) {
         UIViewController *controller=[[_object.controllerClass alloc] init];

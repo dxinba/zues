@@ -30,6 +30,9 @@
 #import "StackedViewController.h"
 #import "SelfSizingCellsViewController.h"
 #import "NestedAdapterViewController.h"
+#import "DiffTableViewController.h"
+#import "SingleSectionViewController.h"
+#import "SingleSectionStoryboardViewController.h"
 
 @interface DemosViewController ()<IGListAdapterDataSource>
 //IGListAdapter来控制collectionView的数据显示
@@ -73,12 +76,12 @@
                   [[DemoItem alloc] init:@"混合数据" controllerClass:[MixedDataViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"嵌套 Adapter" controllerClass:[NestedAdapterViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
-                  [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
-                  [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
-                  [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
-                  [[DemoItem alloc] init:@"Search Autocomplete 搜索" controllerClass:[SearchViewController class] controllerIdentifier:nil],
+                  [[DemoItem alloc] init:@"Single Section Controller" controllerClass:[SingleSectionViewController class] controllerIdentifier:nil],
+                  [[DemoItem alloc] init:@"Storyboard" controllerClass:[SingleSectionViewController class] controllerIdentifier:@"demo"],
+                  [[DemoItem alloc] init:@"Single Section Storyboard" controllerClass:[SingleSectionStoryboardViewController class] controllerIdentifier:@"singleSectionDemo"],
                   [[DemoItem alloc] init:@"working range" controllerClass:[WorkingRangeViewController class] controllerIdentifier:nil],
-                  [[DemoItem alloc] init:@"空视图" controllerClass:[EmptyViewController class] controllerIdentifier:nil],
+                  [[DemoItem alloc] init:@"Diff 算法" controllerClass:[DiffTableViewController class] controllerIdentifier:nil],
+                  [[DemoItem alloc] init:@"补充视图" controllerClass:[SupplementaryViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"自适应cells" controllerClass:[SelfSizingCellsViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"滚动过程中cell的显示或隐藏delegate回调" controllerClass:[DisplayViewController class] controllerIdentifier:nil],
                   [[DemoItem alloc] init:@"Stacked Section Controllers" controllerClass:[StackedViewController class] controllerIdentifier:nil],nil];
